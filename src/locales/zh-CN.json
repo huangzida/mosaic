@@ -1,0 +1,26 @@
+{
+  "tabs": {
+    "basic": "基础",
+    "colors": "颜色",
+    "texture": "纹理",
+    "modern": "现代"
+  },
+  "labels": {
+    "speed": "速度",
+    "gridSize": "格子大小（像素）",
+    "blurIntensity": "模糊",
+    "grainOpacity": "颗粒",
+    "color1": "颜色 1",
+    "color2": "颜色 2",
+    "color3": "颜色 3",
+    "textureType": "纹理",
+    "modernIntensity": "现代强度",
+    "modernFlow": "现代流动",
+    "modernBloom": "现代泛光"
+  },
+  "textureOptions": {
+    "soft": "柔和",
+    "pixel": "像素",
+    "ripple": "波纹"
+  }
+}

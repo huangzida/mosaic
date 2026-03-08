@@ -1,0 +1,26 @@
+{
+  "tabs": {
+    "basic": "Basic",
+    "colors": "Colors",
+    "texture": "Texture",
+    "modern": "Modern"
+  },
+  "labels": {
+    "speed": "Speed",
+    "gridSize": "Grid Size (px)",
+    "blurIntensity": "Blur",
+    "grainOpacity": "Grain",
+    "color1": "Color 1",
+    "color2": "Color 2",
+    "color3": "Color 3",
+    "textureType": "Texture",
+    "modernIntensity": "Modern Intensity",
+    "modernFlow": "Modern Flow",
+    "modernBloom": "Modern Bloom"
+  },
+  "textureOptions": {
+    "soft": "Soft",
+    "pixel": "Pixel",
+    "ripple": "Ripple"
+  }
+}

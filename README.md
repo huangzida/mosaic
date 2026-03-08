@@ -1,24 +1,24 @@
-# @bg-effects/fireworks
+# @bg-effects/mosaic
 
 [English](./README.md) | [简体中文](./README_CN.md)
 
-A high-performance fireworks background effect built with OGL and Vue.
+A high-performance mosaic background effect built with OGL and Vue.
 
-[Live Demo](https://huangzida.github.io/fireworks/)
+[Live Demo](https://huangzida.github.io/mosaic/)
 
 ---
 
 ### Features
 
 - 🚀 **High Performance**: Built with OGL (a lightweight WebGL library) for smooth rendering.
-- 🎨 **Highly Customizable**: Multiple shapes (heart, star, butterfly, etc.), launch modes, and color options.
+- 🎨 **Highly Customizable**: Adjustable grid size, blur intensity, grain opacity, and color options.
 - 🛠️ **Debug Mode**: Built-in visual debug panel for real-time adjustments.
 - 📦 **Ready to Use**: Easy-to-use Vue component with simple configuration.
 
 ### Installation
 
 ```bash
-pnpm add @bg-effects/fireworks ogl
+pnpm add @bg-effects/mosaic ogl
 ```
 
 > **Note**: `ogl` is a peer dependency and needs to be installed manually.
@@ -27,15 +27,15 @@ pnpm add @bg-effects/fireworks ogl
 
 ```vue
 <script setup>
-import { Fireworks } from '@bg-effects/fireworks'
+import { Mosaic } from '@bg-effects/mosaic'
 </script>
 
 <template>
   <div style="width: 100vw; height: 100vh; background: #000;">
-    <Fireworks 
-      :firework-count="50"
-      shape="heart"
-      color-mode="multi"
+    <Mosaic 
+      :speed="1.0"
+      :grid-size="20"
+      :blur-intensity="1.5"
     />
   </div>
 </template>
@@ -45,21 +45,19 @@ import { Fireworks } from '@bg-effects/fireworks'
 
 | Prop | Type | Default | Description |
 | :--- | :--- | :--- | :--- |
-| `firework-count` | `number` | `30` | Number of fireworks |
 | `speed` | `number` | `1.0` | Animation speed |
-| `size` | `number` | `2.0` | Particle size |
-| `shape` | `string` | `'normal'` | Firework shape (see below) |
-| `launch-mode` | `string` | `'random'` | Launch mode (see below) |
-| `color-mode` | `string` | `'multi'` | Color mode (`'single'` or `'multi'`) |
-| `color` | `string` | `'#ff0000'` | Color when color mode is `'single'` |
+| `gridSize` | `number` | `20` | Grid size of the mosaic |
+| `blurIntensity` | `number` | `1.5` | Intensity of the blur effect |
+| `grainOpacity` | `number` | `0.1` | Opacity of the grain texture |
+| `textureType` | `0 \| 1 \| 2` | `0` | Type of texture used |
+| `color1` | `string` | `'#ff0000'` | First color of the effect |
+| `color2` | `string` | `'#00ff00'` | Second color of the effect |
+| `color3` | `string` | `'#0000ff'` | Third color of the effect |
+| `modernIntensity` | `number` | `1.0` | Intensity of modern effects |
+| `modernFlow` | `number` | `1.0` | Flow of modern effects |
+| `modernBloom` | `number` | `1.0` | Bloom intensity for modern effects |
 | `debug` | `boolean` | `false` | Enable debug panel |
 | `lang` | `'zh-CN' \| 'en'` | `'zh-CN'` | UI language |
-
-#### Supported Shapes (`shape`)
-`normal`, `circular`, `heart`, `star`, `butterfly`, `spiral`, `ring`, `doubleRing`, `atom`, `trefoil`, `clover`, `cross`, `saturn`, `hexagram`, `astroid`, `gear`, `fermat`, `folium`, `random`
-
-#### Launch Modes (`launchMode`)
-`random`, `burst`, `wave`, `tide`, `simultaneous`, `pendulum`
 
 ### Local Development
 
